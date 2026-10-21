@@ -1,0 +1,13 @@
+[project]
+name = "agentic-workflow-development"
+version = "0.1.0"
+description = "School management app."
+requires-python = "==3.12.*"
+dependencies = ["django>=5.2,<5.4"]
+
+[dependency-groups]
+dev = ["pytest", "pytest-django", "ruff"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
