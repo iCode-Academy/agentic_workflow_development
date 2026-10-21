@@ -2,7 +2,7 @@
 
 ## Project
 - School management app. Django 5.2, Python 3.12, SQLite (db.sqlite3, dev only).
-- Setup: python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+- Setup: uv sync && source .venv/bin/activate (uv manages Python, the venv and packages; never use pip).
 - Run tests: pytest
 - Run app: python manage.py runserver
 - Lint: ruff check .
@@ -18,7 +18,7 @@
 - Smallest complete change. No unrelated refactoring.
 - Follow existing naming and file layout.
 - Add or update tests for every behaviour change.
-- Do not add dependencies without asking.
+- Do not add dependencies without asking. Never run `uv add` or `uv remove` without approval.
 
 ## Before finishing
 - Run pytest and ruff check .
