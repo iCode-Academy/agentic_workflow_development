@@ -11,3 +11,7 @@ dev = ["pytest", "pytest-django", "ruff"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+
+[tool.ruff.lint]
+# RUF012 conflicts with Django's Meta options and migration boilerplate.
+ignore = ["RUF012"]
