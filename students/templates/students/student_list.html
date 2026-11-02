@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Students</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Students{% endblock %}
+
+{% block content %}
   <h1>Students</h1>
   {% if students %}
     <ul>
@@ -15,5 +13,4 @@
   {% else %}
     <p>No active students.</p>
   {% endif %}
-</body>
-</html>
+{% endblock %}

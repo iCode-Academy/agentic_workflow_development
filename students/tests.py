@@ -70,7 +70,7 @@ def test_student_list_url():
 def test_student_list_requires_login(client):
     response = client.get('/students/')
     assert response.status_code == 302
-    assert response['Location'].startswith('/accounts/login/')
+    assert response['Location'].startswith(reverse('admin:login'))
 
 
 @pytest.mark.django_db
@@ -161,7 +161,7 @@ def test_admin_student_changelist_is_not_reachable_by_non_staff(client, user):
 @pytest.mark.django_db
 def test_student_list_redirect_preserves_next_parameter(client):
     response = client.get('/students/')
-    assert response['Location'] == '/accounts/login/?next=/students/'
+    assert response['Location'] == f'{reverse("admin:login")}?next=/students/'
 
 
 @pytest.mark.django_db
