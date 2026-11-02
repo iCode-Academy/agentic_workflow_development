@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <h1>Dashboard</h1>
+  <ul>
+    <li>Students: <strong>{{ student_count }}</strong> &mdash; <a href="{% url 'student-list' %}">view list</a></li>
+    <li>Teachers: <strong>{{ teacher_count }}</strong> &mdash; <a href="{% url 'teachers:teacher_list' %}">view list</a></li>
+    <li>Courses: <strong>{{ course_count }}</strong> &mdash; <a href="{% url 'course-list' %}">view list</a></li>
+  </ul>
+{% endblock %}
